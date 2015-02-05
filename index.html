@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To Do</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="styles.css">
+  <script type="html/template" id="ToDoTmpl">
+  <article data-todoid="<%= _id %>">
+  <h3><%= Task %></h3>
+  <h4><%= description %></h4>
+  <p><%= deadline %></p>
+  <button class="deleteTask">Delete</button> | <button class="showEditTask">Edit</button>
+  <form class="editTask" action="">
+  <div class="form-group">
+  <input type="text" class="form-control" name="editTask" value="<%= Task %>">
+  </div>
+  <div class="form-group">
+  <textarea name="editDescription" class="form-control" id="" cols="30" rows="10">
+  <%= description %></textarea>
+  </div>
+  <div class="form-group">
+  <input type="text" class="form-control" name="editDeadline" value="<%= deadline %>">
+  </div>
+  <button type="submit" class="btn btn-primary">Edit To-Do List</button>
+  </form>
+  </article>
+  </script>
+</head>
+<body>
+  <header>
+    <div class="jumbotron">
+      <h1>My To-Do List!</h1>
+    </div>
+  </header>
+  <div class="container">
+    <div class="row">
+      <section class="col-md-8">
+
+        <article>
+          <h3></h3>
+          <h4></h4>
+          <p></p>
+        </article>
+      </section>
+      <aside class="col-md-4">
+        <form id="createTask" action="">
+          <div class="form-group">
+            <input type="text" class="form-control" name="newTask" placeholder="Task name">
+          </div>
+          <div class="form-group">
+            <textarea name="newDescription" class="form-control" id="" cols="30" rows="10" placeholder="Description of task"></textarea>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="newDeadline" placeholder="Deadline">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Add Task</button>
+        </form>
+      </aside>
+    </div>
+  </div>
+  <footer></footer>
+
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+  <script src="main.js"></script>
+</body>
+</html>

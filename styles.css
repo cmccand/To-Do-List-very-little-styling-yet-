@@ -1,0 +1,16 @@
+header {
+  background-color: firebrick;
+  color: skyblue; }
+
+.editTask {
+  display: none; }
+
+.show {
+  display: block; }
+
+h1 {
+  font-family: 'Droid Sans', sans-serif;
+  text-align: center; }
+
+button.deleteTask, button.showEditTask {
+  padding: 5px; }
